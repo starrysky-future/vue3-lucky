@@ -2,7 +2,8 @@ import axios from "axios";
 import { getTokenAUTH } from "@/utils/auth";
 
 const service = axios.create({
-  baseURL: "http://localhost:8888", // 请求前缀
+  baseURL:
+    process.env.NODE_ENV === "development" ? "/api" : "http://localhost:8888",
   headers: {
     "Content-Type": "application/json;charset=utf-8",
   },

@@ -52,4 +52,7 @@ module.exports = {
     // }),
     new VueLoaderPlugin(),
   ],
+  performance: {
+    hints: false,
+  },
 };
